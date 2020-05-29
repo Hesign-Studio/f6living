@@ -1,0 +1,266 @@
+.container-apt {
+  min-height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.container-apt > section {
+  flex: 1 1 auto;
+}
+
+.apt {
+  min-height: 100vh;
+  max-width: 50%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 130px;
+  margin-bottom: 5em;
+  margin-left: 2.5em;
+  margin-right: 1.25em;
+
+  .title {
+    align-self: flex-start;
+
+    h1 {
+      margin: 0;
+      padding-bottom: 1em;
+    }
+  }
+
+  /*_________SLIDER________SLIDER_______SLIDER*/
+
+  $num-of-slide: 6;
+
+  @mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+  }
+  @mixin transition($x) {
+    transition: $x;
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -ms-transition: $x;
+    -o-transition: $x;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    align-self: center;
+  }
+  input {
+    display: none;
+  }
+  .inner {
+    width: percentage($num-of-slide);
+  }
+  article {
+    width: percentage(1 / $num-of-slide);
+    margin-top: -23.5px;
+    float: left;
+    position: relative;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /*---- SET UP CONTROL ----*/
+  .slider-prev-next-control {
+    height: auto;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    @include transform(translateY(-50%));
+
+    label {
+      display: none;
+      width: 40px;
+      height: 40px;
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* Slider Styling */
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    @include transform(translateZ(0));
+    @include transition(all 500ms ease-out);
+
+    .inner {
+      @include transform(translateZ(0));
+      @include transition(all 800ms cubic-bezier(0.77, 0, 0.175, 1));
+    }
+  }
+
+  /*---- SET POSITION FOR SLIDE ----*/
+  %bind-prev-next-button {
+    text-decoration: inherit;
+    text-align: center;
+    display: block;
+  }
+
+  %bind-next-button {
+    @extend %bind-prev-next-button;
+    content: url(../img/next.svg);
+  }
+
+  %bind-next-label {
+    display: block;
+    float: right;
+    margin-right: O;
+  }
+
+  %bind-prev-label {
+    display: block;
+    float: left;
+    margin-left: 0;
+  }
+
+  %bind-prev-button {
+    @extend %bind-prev-next-button;
+    content: url(../img/back.svg);
+  }
+
+  @for $i from 1 through $num-of-slide {
+    #slide#{$i}:checked {
+      & ~ .slider-wrapper .inner {
+        margin-left: percentage(1 - $i);
+      }
+    }
+  }
+
+  @for $i from 1 through ($num-of-slide - 1) {
+    #slide#{$i}:checked {
+      & ~ .slider-prev-next-control label:nth-child(#{$i + 1}) {
+        @extend %bind-next-label;
+
+        &::after {
+          @extend %bind-next-button;
+        }
+      }
+    }
+  }
+
+  #slide#{$num-of-slide}:checked
+    ~ .slider-prev-next-control
+    label:nth-child(1) {
+    @extend %bind-next-label;
+
+    &::after {
+      @extend %bind-next-button;
+    }
+  }
+
+  @for $i from 2 through $num-of-slide {
+    #slide#{$i}:checked {
+      & ~ .slider-prev-next-control label:nth-child(#{$i - 1}) {
+        @extend %bind-prev-label;
+
+        &::after {
+          @extend %bind-prev-button;
+        }
+      }
+    }
+  }
+
+  #slide#{1}:checked
+    ~ .slider-prev-next-control
+    label:nth-child(#{$num-of-slide}) {
+    @extend %bind-prev-label;
+
+    &::after {
+      @extend %bind-prev-button;
+    }
+  }
+  /*_________SLIDER________SLIDER_______SLIDER*/
+  .list {
+    height: auto;
+    margin-top: auto;
+  }
+}
+/*_________End___Apt_____*/
+
+.grundrisse {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 130px;
+  margin-bottom: 5em;
+  margin-left: 1.25em;
+  margin-right: 2.5em;
+
+  .title {
+    h1 {
+      margin: 0;
+      padding-bottom: 1em;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    align-self: stretch;
+    margin-bottom: 2em;
+
+    th {
+      border-bottom: 0.5px solid black;
+      font-size: 0.8em;
+      width: 15%;
+      text-align: inherit;
+      white-space: nowrap;
+    }
+
+    td {
+      width: fit-content;
+      font-size: 0.7em;
+      white-space: nowrap;
+      p {
+        margin: 0;
+        letter-spacing: -0.09rem;
+        display: inline-block;
+        sup {
+          font-size: 0.6em;
+        }
+      }
+
+      img {
+        width: 15%;
+      }
+    }
+  }
+
+  .brochure {
+    height: auto;
+    margin-top: auto;
+
+    .title {
+      h1 {
+        margin: 0;
+        padding-bottom: 1em;
+        hr {
+          width: 100%;
+        }
+      }
+    }
+    a {
+      color: black;
+    }
+  }
+}

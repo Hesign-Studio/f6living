@@ -1,0 +1,429 @@
+@import "slider";
+@import "font";
+@import "mobile";
+
+/*---- General----*/
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Serif";
+  font-size: 1.3em;
+  line-height: 1.7em;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  z-index: 2;
+
+  .menu {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .logo {
+      font-family: "HelveticaNowDisplay";
+      font-size: 2em;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    ul {
+      display: flex;
+      letter-spacing: 0.1rem;
+      box-sizing: border-box;
+
+      li {
+        list-style-type: none;
+        padding: 0.9em;
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  width: 50vw;
+  font-family: "HelveticaNowDisplay";
+  font-weight: 500;
+  font-size: 2.5em;
+  line-height: 1.2em;
+  z-index: 1;
+
+  hr {
+    margin-bottom: 0.2em;
+    width: 50vw;
+    border: 0.5px solid black;
+  }
+}
+
+footer {
+  position: sticky;
+  background-color: rgb(246, 244, 244);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1em;
+  white-space: nowrap;
+
+  div {
+    width: 25vw;
+    padding: 1em;
+  }
+  .impressum {
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+/*---- Home----*/
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100vw;
+  max-height: 100%;
+
+  .right {
+    z-index: -1;
+    width: 60vw;
+    height: fit-content;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .left {
+    width: 40vw;
+    z-index: 1;
+    margin-top: 0 auto;
+
+    h1 {
+      margin-left: 1em;
+      padding-top: 2em;
+    }
+  }
+}
+
+.top2 {
+  display: flex;
+  width: 100vw;
+  max-height: 100%;
+
+  .left {
+    width: 60vw;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .right {
+    width: 40vw;
+    height: auto;
+
+    .list {
+      padding-top: 4em;
+      margin-left: 1.5em;
+      width: 90%;
+      list-style-type: disc;
+      list-style-position: outside;
+    }
+  }
+}
+
+.intro {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 4em;
+  font-family: "IBM Plex Serif M";
+  font-size: 2.3em;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.info {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .next {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    z-index: 1;
+    bottom: 2.5em;
+
+    .grundriss {
+      width: 25vw;
+      height: 15vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      white-space: nowrap;
+      padding: 1.5em;
+      transition: opacity 0.5s ease-in;
+
+      a {
+        align-self: center;
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .grundriss:hover {
+      opacity: 0.7;
+    }
+  }
+}
+/*________About F6_________*/
+.container-f6 {
+  min-height: 100%;
+  height: auto;
+  min-width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.info2 {
+  min-height: 100vh;
+  max-width: 50%;
+  margin-left: 2.5em;
+  margin-right: 1em;
+  margin-top: 105px;
+  display: block;
+
+  position: relative;
+  overflow: hidden;
+
+  .text {
+    p {
+      padding: 1.5em;
+      line-height: 1.4em;
+    }
+  }
+}
+.showcase {
+  height: 100%;
+  max-width: 50%;
+  margin-top: 7em;
+  display: block;
+  position: relative;
+  bottom: 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .next {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    height: 50vh;
+
+    .grundriss {
+      width: 25vw;
+      height: 15vh;
+      background-color: rgb(246, 244, 244);
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      white-space: nowrap;
+      padding: 1.5em;
+      transition: opacity 0.5s ease-in;
+
+      a {
+        align-self: center;
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .grundriss:hover {
+      opacity: 0.7;
+    }
+  }
+}
+/*________Lage_________*/
+.berlin {
+  margin-top: 105px;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+
+  .title {
+    float: right;
+  }
+
+  .container-map {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .map {
+      width: 50vw;
+      img {
+        margin-top: 200px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    .text {
+      width: 50vw;
+      z-index: 1;
+      font-size: inherit;
+
+      p {
+        padding: 1.5em;
+        line-height: 1.4em;
+      }
+
+      .caption {
+        width: 100%;
+        padding: 1.5em;
+        color: rgb(14, 0, 110);
+        float: left;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.address {
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-top: 2.5em;
+  margin-bottom: 5em;
+  position: relative;
+
+  .title {
+    float: right;
+  }
+
+  .container-map {
+    width: 100%;
+    display: flex;
+    margin: 0;
+
+    .map {
+      width: 65vw;
+      position: relative;
+      margin: 0;
+      svg {
+        width: 100%;
+        z-index: -1;
+      }
+    }
+    .caption {
+      width: 40vw;
+      padding: 1.5em;
+      color: rgb(14, 0, 110);
+      float: left;
+      white-space: nowrap;
+    }
+  }
+}
+
+/*________HAMBURGER MENU_________*/
+.menu-btn {
+  position: absolute;
+  -webkit-appearance: none;
+  display: none;
+  z-index: -1;
+  visibility: hidden;
+  text-indent: -9999px;
+}
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  padding: 28px 20px;
+  z-index: 1;
+
+  .navicon {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 1.625rem;
+  }
+  .navicon:before,
+  .navicon:after {
+    background: black;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .navicon:before {
+    top: 7px;
+  }
+  .navicon:after {
+    top: -7px;
+  }
+}
+
+/*________Impressum_________*/
+
+.container-impressum {
+  min-height: 100vh;
+  width: 50vw;
+  display: block;
+  margin-top: 140px;
+  margin-left: 2.5em;
+  margin-bottom: 5em;
+
+  h2 {
+    overflow-wrap: anywhere;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}

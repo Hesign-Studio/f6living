@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("font/HelveticaNowDisplay-Bold.woff2") format("woff2"),
+    url("font/HelveticaNowDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("font/HelveticaNowDisplay-Light.woff2") format("woff2"),
+    url("font/HelveticaNowDisplay-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Serif M";
+  src: url("font/IBMPlexSerif-Medium.woff2") format("woff2"),
+    url("IBMPlexSerif-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  src: url("font/IBMPlexSerif-Bold.woff2") format("woff2"),
+    url("font/IBMPlexSerif-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  src: url("font/IBMPlexSerif-Text.woff2") format("woff2"),
+    url("font/IBMPlexSerif-Text.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}

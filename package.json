@@ -1,0 +1,16 @@
+{
+  "name": "f6living",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d assets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "http:Hesign-Studio.github.io/f6living",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
