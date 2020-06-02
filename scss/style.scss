@@ -60,6 +60,12 @@ header {
         list-style-type: none;
         padding: 0.9em;
 
+        &:last-child {
+          a {
+            color: rgb(14, 0, 110);
+          }
+        }
+
         a {
           color: black;
           text-decoration: none;
@@ -160,8 +166,9 @@ footer {
       list-style-position: outside;
       sup {
         font-size: 0.6em;
-        padding: 0;
         margin-left: -0.4em;
+        margin-bottom: 0;
+        line-height: 0;
       }
     }
   }
