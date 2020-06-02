@@ -158,6 +158,11 @@ footer {
       width: 90%;
       list-style-type: disc;
       list-style-position: outside;
+      sup {
+        font-size: 0.6em;
+        padding: 0;
+        margin-left: -0.4em;
+      }
     }
   }
 }
