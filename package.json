@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://f6-living.com/index.html",
+  "homepage": "https://f6-living.com/index.html/",
   "dependencies": {
     "gh-pages": "^2.2.0"
   }
